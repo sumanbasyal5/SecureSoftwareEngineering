@@ -5,29 +5,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import logic.CompareManager;
+import factory.SecureFactory;
+import helper.SecureConstant;;
 public class SecureProgram {
+	
+	public static CompareManager _compareManager;
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("secure software engineering");
-		List<String> listString = new ArrayList<String>();
-		try {
-			File file = new File("test.txt");
-			FileReader fileReader = new FileReader(file);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			StringBuffer stringBuffer = new StringBuffer();
-			String line;
-			while ((line = bufferedReader.readLine()) != null) {
-				stringBuffer.append(line);
-				stringBuffer.append("\n");
-			}
-			fileReader.close();
-			System.out.println("Contents of file:");
-			System.out.println(stringBuffer.toString());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+		_compareManager=(CompareManager)SecureFactory.GetObject(SecureConstant.SECURE_COMPARE_MANAGER);
+	    boolean result=_compareManager.IsComparePresent("C:/Users/basya/Desktop/test/code.txt");
+	    if(result==true)
+	    	System.out.println("The code is not security complaint");
+	    else
+	    	System.out.println("The code is security complaint");
 	}
 
 }

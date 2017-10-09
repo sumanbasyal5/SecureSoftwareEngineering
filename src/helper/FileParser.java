@@ -1,4 +1,4 @@
-package logic;
+package helper;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,8 +7,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Author: Suman Basyal
+ */
 public class FileParser {
-	public List<String> GetStringsFromFiles(String filename){
+	public static List<String> GetStringsFromFiles(String filename){
 		List<String> list= new ArrayList<String>();
 		try {
 			File file = new File(filename);
