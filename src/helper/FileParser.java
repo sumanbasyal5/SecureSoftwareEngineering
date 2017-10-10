@@ -33,6 +33,7 @@ public class FileParser {
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;
+			
 		}
 		return list;
 		
