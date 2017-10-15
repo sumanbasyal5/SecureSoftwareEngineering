@@ -22,12 +22,12 @@ public class SecureProgram {
 		List<String> listResult= new ArrayList<String>();
 		//checking for compare manager
 		_compareManager=(CompareManager)SecureFactory.GetObject(SecureConstant.SECURE_COMPARE_MANAGER);
-	    listResult.add(_compareManager.IsComparePresent("C:/Users/basya/Desktop/test/code.txt"));
+	    listResult.add(_compareManager.IsComparePresent("inputFiles/code.txt"));
 	    
 	    //checking for scope manager
 	    _scopeManager=(ScopeManager)SecureFactory.GetObject(SecureConstant.SECURE_SCOPE_MANAGER);
 	   
-	    listResult.add(_scopeManager.CheckForScopeOfI("C:/Users/basya/Desktop/test/scope.txt"));
+	    listResult.add(_scopeManager.CheckForScopeOfI("inputFiles/scope.txt"));
 	    
 	    
 	    
