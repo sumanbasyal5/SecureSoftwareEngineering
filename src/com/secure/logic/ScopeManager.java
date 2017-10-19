@@ -6,6 +6,10 @@ import java.util.List;
 import com.secure.helper.FileLineParser;
 import com.secure.model.CustomFile;
 
+
+/*
+ Author: Suman Basyal
+ */
 public class ScopeManager {
 	
 	public String CheckForScopeOfI(String fileName){

@@ -21,8 +21,8 @@ public class SecureProgram {
 		System.out.println("secure software engineering");
 		List<String> listResult= new ArrayList<String>();
 		//checking for compare manager
-		_compareManager=(CompareManager)SecureFactory.GetObject(SecureConstant.SECURE_COMPARE_MANAGER);
-	    listResult.add(_compareManager.IsComparePresent("inputFiles/code.txt"));
+		//_compareManager=(CompareManager)SecureFactory.GetObject(SecureConstant.SECURE_COMPARE_MANAGER);
+	    //listResult.add(_compareManager.IsComparePresent("inputFiles/code.txt"));
 	    
 	    //checking for scope manager
 	    _scopeManager=(ScopeManager)SecureFactory.GetObject(SecureConstant.SECURE_SCOPE_MANAGER);
