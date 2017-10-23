@@ -2,6 +2,7 @@ package com.secure.factory;
 
 import com.secure.helper.SecureConstant;
 import com.secure.logic.CompareManager;
+import com.secure.logic.OrdinalManager;
 import com.secure.logic.ScopeManager;
 
 /*
@@ -14,6 +15,8 @@ public  class SecureFactory {
 			return new CompareManager();
 		if(type==SecureConstant.SECURE_SCOPE_MANAGER)
 			return new ScopeManager();
+		if(type==SecureConstant.SECURE_ORDINAL_MANAGER)
+			return new OrdinalManager();
 		
 		return new Object();
 	}

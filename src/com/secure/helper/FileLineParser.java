@@ -1,6 +1,7 @@
 package com.secure.helper;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,6 +10,9 @@ import java.util.List;
 
 import com.secure.model.CustomFile;
 
+/*
+ Author :Suman Basyal
+ */
 public class FileLineParser {
 	public static List<CustomFile> GetLinesFromFiles(String filename){
 		List<CustomFile> list= new ArrayList<CustomFile>();

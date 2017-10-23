@@ -1,0 +1,12 @@
+enum Hydrocarbon {
+  METHANE(1), ETHANE(2), PROPANE(3), BUTANE(4), PENTANE(5),
+  HEXANE(6), BENZENE(6), HEPTANE(7), OCTANE(8), NONANE(9),
+  DECANE(10);
+  private final int numberOfCarbons;
+  Hydrocarbon(int carbons) { 
+    this.numberOfCarbons = carbons; 
+  }
+  public int getNumberOfCarbons() {
+    return numberOfCarbons;
+  }
+}

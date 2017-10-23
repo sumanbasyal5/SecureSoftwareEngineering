@@ -1,0 +1,7 @@
+enum Hydrocarbon {
+  METHANE, ETHANE, PROPANE, BUTANE, PENTANE,
+  HEXANE, HEPTANE, OCTANE, NONANE, DECANE;
+  public int getNumberOfCarbons() {
+    return ordinal() + 1;
+  }
+}
