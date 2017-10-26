@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.lamarcs.securesoftware</groupId>
+	<artifactId>secureCode</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<packaging>jar</packaging>
+
+	<name>SecurityCompliantCode</name>
+	<url>http://www.lamar.edu</url>
+
+	<dependencies>
+		<dependency>
+		    <groupId>com.github.javaparser</groupId>
+		    <artifactId>javaparser-core</artifactId>
+		    <version>2.1.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.github.javaparser</groupId>
+		    <artifactId>java-symbol-solver-core</artifactId>
+		    <version>0.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+					<configuration>
+						<verbose>true</verbose>
+						<source>1.7</source>
+						<target>1.7</target>
+						<showWarnings>true</showWarnings>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
