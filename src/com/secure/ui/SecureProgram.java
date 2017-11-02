@@ -10,17 +10,20 @@ import com.secure.factory.SecureFactory;
 import com.secure.helper.SecureConstant;
 import com.secure.logic.CompareManager;
 import com.secure.logic.OrdinalManager;
-import com.secure.logic.ScopeManager;;
+import com.secure.logic.ScopeManager;
+import com.secure.logic.EncryptionManager;
 public class SecureProgram {
 	
 	public static CompareManager _compareManager;
 	public static ScopeManager _scopeManager;
 	public static OrdinalManager _ordinalManager;
+	public static EncryptionManager _encryptionManager;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("secure software engineering");
 		List<String> listResult= new ArrayList<String>();
+		/*
 		//checking for compare manager
 		_compareManager=(CompareManager)SecureFactory.GetObject(SecureConstant.SECURE_COMPARE_MANAGER);
 	    listResult.add(_compareManager.IsComparePresent("inputFiles/code.txt"));
@@ -32,10 +35,11 @@ public class SecureProgram {
 	    //checking for ordinal manager
 	    _ordinalManager=(OrdinalManager)SecureFactory.GetObject(SecureConstant.SECURE_ORDINAL_MANAGER);
 	    listResult.add(_ordinalManager.FindOrdinal("inputFiles/ordinal.txt"));
-	    
-	    
-	    
-	    
+	    */
+	    //checking for ordinal manager
+	    _encryptionManager=(EncryptionManager)SecureFactory.GetObject(SecureConstant.SECURE_ENCRYPTION_MANAGER);
+	    listResult.add(_encryptionManager.CheckForUnsecureAlgorithm("inputFiles/unsecure.txt"));
+	      
 	    
 	    ShowResult(listResult);
 	}
