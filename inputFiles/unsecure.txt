@@ -1,0 +1,5 @@
+SecretKey key = KeyGenerator.getInstance("DES").generateKey();
+Cipher cipher = Cipher.getInstance("DES");
+cipher.init(Cipher.ENCRYPT_MODE, key);
+byte[] encoded = strToBeEncrypted.getBytes("UTF8");
+byte[] encrypted = cipher.doFinal(encoded);

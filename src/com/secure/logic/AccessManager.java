@@ -1,5 +1,6 @@
 package com.secure.logic;
 
+import com.secure.helper.FileParser;
 import com.secure.logic.finder.PrivateObjectFinder;
 
 import java.util.ArrayList;
@@ -9,7 +10,9 @@ import java.util.List;
  * Created by kaushik on 10/14/17.
  */
 public class AccessManager {
-    public boolean isAccessible(List<String> list){
+    public String isAccessible(String filename){
+        String result;
+        List<String> list= FileParser.GetStringsFromFiles(filename);
 //        Get private object lists
         ArrayList<String> privateObjectList = (ArrayList<String>) PrivateObjectFinder.findPrivateObject(list);
 
@@ -37,8 +40,10 @@ public class AccessManager {
                 System.out.println(j+". " + tempPrivateObject);
                 j++;
             }
-            return true;
+            result = "Success";
         }else
-            return false;
+            result = "Failure";
+
+        return result;
     }
 }

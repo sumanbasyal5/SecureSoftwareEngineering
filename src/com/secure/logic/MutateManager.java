@@ -1,5 +1,6 @@
 package com.secure.logic;
 
+import com.secure.helper.FileParser;
 import com.secure.logic.finder.PrivateObjectFinder;
 
 import java.util.ArrayList;
@@ -11,7 +12,9 @@ import java.util.regex.Pattern;
  * Created by kaushik on 10/23/17.
  */
 public class MutateManager {
-    public boolean isMutable(List<String> list){
+    public String isMutable(String filename){
+        String result;
+        List<String> list= FileParser.GetStringsFromFiles(filename);
         //        Get private object lists
         ArrayList<String> privateObjectList = (ArrayList<String>) PrivateObjectFinder.findPrivateObject(list);
 
@@ -73,8 +76,10 @@ public class MutateManager {
                 System.out.println(j+". " + tempPrivateObject);
                 j++;
             }
-            return true;
+            result = "Success";
         }else
-            return false;
+            result = "Failure";
+
+        return result;
     }
 }

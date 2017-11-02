@@ -1,0 +1,9 @@
+class Mutable {
+  private int[] privateArray = new int[10];
+  private int[] privateArray2 = new int[20];
+  public int[] getArray() {    return privateArray;  }
+
+  public void setArray(int[] incomingArray){
+     privateArray2 = incomingArray;
+  }
+ }
