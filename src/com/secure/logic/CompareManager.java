@@ -1,17 +1,15 @@
-package logic;
+package com.secure.logic;
 import java.util.List;
 
-import helper.FileParser;
-import helper.SecureConstant;
+import com.secure.helper.SecureConstant;
 
 public class CompareManager {
 	/*
 	 * Author: Suman Basyal
 	 * 
 	 */
-	public boolean IsComparePresent(String filename)
+	public boolean IsComparePresent(List<String> list)
 	{
-		List<String> list=FileParser.GetStringsFromFiles(filename);
 		boolean found=false;
 		for(int i=0;i<list.size();i++){
 			String val=list.get(i);	

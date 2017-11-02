@@ -1,4 +1,4 @@
-package helper;
+package com.secure.helper;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,14 +22,12 @@ public class FileParser {
 			while ((line = bufferedReader.readLine()) != null) {
 				//stringBuffer.append(line);
 				//stringBuffer.append("\n");
-				String [] array=line.split(" ");
+				String [] array=line.split(" ");					//What if we have variable=value without space?
 				for(int i=0;i<array.length;i++){
 					list.add(array[i]);
 				}
 			}
 			fileReader.close();
-			System.out.println("Contents of file:");
-			System.out.println(stringBuffer.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;
